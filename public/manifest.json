@@ -1,13 +1,10 @@
 {
-    "manifest_version": 3,
-    "name": "React Chrome Extension",
-    "version": "1.0.0",
-    "description": "A simple React app as a Chrome extension",
-    "action": {
-      "default_popup": "index.html"
-    },
-    "background": {
-      "service_worker": "background.js"
-    },
-    "permissions": []
-  }
+  "manifest_version": 3,
+  "name": "Chrome Reading List Export/Import",
+  "version": "1.0.0",
+  "description": "A Chrome extension to export and import your reading list.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["readingList"]
+}
