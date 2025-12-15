@@ -14,12 +14,12 @@ To build the extension, you need to have Node.js and npm installed.
     ```sh
     npm run build
     ```
-    The bundled extension will be available in the `dist` directory.
+    The bundled extension will be available in the `build` directory.
 
 ## Load Extension in Chrome
 
 1.  Open Chrome and navigate to `chrome://extensions/`.
 2.  Enable "Developer mode" using the toggle switch in the top right corner.
-3.  Click "Load unpacked" and select the `dist` directory.
+3.  Click "Load unpacked" and select the `build` directory.
 
 The extension will now be active in your browser.
