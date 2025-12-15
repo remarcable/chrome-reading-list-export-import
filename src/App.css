@@ -1,3 +1,7 @@
+:root {
+  color-scheme: light dark;
+}
+
 #root {
   width: 320px;
   margin: 0 auto;
@@ -23,6 +27,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .card h2 {
@@ -31,39 +36,73 @@ header h1 {
 }
 
 .card p {
-    margin: 0;
+  margin: 0;
 }
 
-button {
+.button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: light-dark(#007bff, #375a7f);
+  color: light-dark(#fff, #eee);
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.button:hover:not(:disabled) {
+  border-color: #fff;
 }
-button:focus,
-button:focus-visible {
+.button:focus,
+.button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-button:disabled {
-    background-color: #333;
-    cursor: not-allowed;
+.button:disabled {
+  background-color: light-dark(#ccc, #333);
+  color: light-dark(#666, #666);
+  cursor: not-allowed;
+  border-color: transparent;
 }
 
-
 input[type="file"] {
-    font-family: inherit;
-    font-size: 1em;
+  font-family: inherit;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5rem;
 }
 
 .message {
   margin-top: 1rem;
+
   font-weight: bold;
+}
+
+.progress-bar-container {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  margin-top: 1rem;
+}
+
+.progress-bar-container progress {
+  width: 100%;
+}
+
+.danger-zone {
+  border-color: #ff4d4d;
+}
+
+.danger-zone .button {
+  background-color: #ff4d4d;
+
+  color: white;
+}
+
+.danger-zone .button:hover {
+  background-color: #ff1a1a;
 }
